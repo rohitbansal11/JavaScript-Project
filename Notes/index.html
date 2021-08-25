@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notes</title>
+        <!-- CSS only -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <style>
+            .green {
+                color: lightgreen;
+            }
+
+            .red {
+                color: lightcoral;
+            }
+
+            .blue {
+                color: skyblue
+            }
+
+            #itemList {
+                font-size: 1.5rem;
+            }
+
+            .show {
+                display: block;
+            }
+
+            .hide {
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header class="bg-dark mb-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <nav class="navbar justify-content-between">
+                            <a class="navbar-brand">Notes</a>
+                            
+                        </nav>
+                        
+                    </div>
+                    <div class="col-sm-3">
+
+                    </div>
+                    <div class="col-sm-3">
+                        <nav class="navbar justify-content-left">
+                            <h6 class="name">Rohit Bansal Interview Project  </h6>
+                            
+                        
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+         <!-- heading -->
+        <div class=".container-fluid headd">
+            <div class="row">
+                <div class=" col-sm-6">
+                    <h4>Drap and Drop Here For Edit And Delete</h4>
+                </div>
+                <div class=" col-sm-3">
+                    <h5>Sort By Ascending / Descending</h5>
+                
+                </div>
+                <div class=" col-sm-3">
+                    <h4> Chosse Theme</h4>
+                   
+                </div>
+
+            </div>
+
+        </div>
+        <br>
+
+        <!-- Buttons -->
+        <div class=".container-fluid headd">
+            <div class="row rr">
+                <div class=" col-sm-3 edit_btn_div">
+                    <button href="#" class="btn btn-outline-primary aa edit_btn"  onclick="plzdrag()"  > Edit</button>
+                
+                </div>
+                <div class=" col-sm-3">
+                    <button href="#" class="btn btn-outline-primary aa delete_btn" onclick="plzdrag()" > Delete </button>
+                </div>
+                <div class=" col-sm-3">
+                    <button href="#" class="btn btn-outline-primary aa" onclick="sortListDir()"> Sort</button>
+        
+                </div>
+                <div class=" col-sm-3">
+                    <div class="theme">
+                        <button href="#" class="btn btn-outline-dark aa" onclick="myFunctionDark()"> Dark/White Mode</button>
+                        
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+        </div>
+
+
+
+<!-- //////////////////////// -->
+        <div class="container">
+            <div class="row">
+                <div class="col mx-auto col-md-8 mt-3 text-center">
+                    <div class="alert align-items-center" id="message"></div>
+                    <form id="itemForm">
+                        <h3 class=""> TO DO LIST</h3>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="itemInput" value=""
+                                placeholder="Please enter name...">
+                            <button class="btn btn-outline-primary">ADD ITEM</button>
+                            
+                            <button type="button" class="btn btn-success mr-sm-2" id="savetaskbtn" style="display: none;">
+                                Save Task
+                            </button>
+                            
+                        </div>
+                    </form>
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item status" data-type="all">
+                            <a class="nav-link active" href="#" >All</a>
+                        </li>
+                        <li class="nav-item status" data-type="todo">
+                            <a class="nav-link" href="#">To Do</a>
+                        </li>
+                        <li class="nav-item status" data-type="done">
+                            <a class="nav-link" href="#">Completed</a>
+                        </li>
+                    </ul>
+                    <!-- list items -->
+                    <ul class="list-group list-group-flush " id="itemList" >
+                        <!-- <li class="list-group-item d-flex justify-content-between align-items-center todo" draggable="true">
+                        <span class="title" >Rohit Bansal </span>
+                        <span>
+                            <a href="#" data-done><i class="bi ${iconClass} green"></i></a>
+                            <a href="#" data-edit><i class="bi bi-pencil-square blue"></i></a>
+                            <a href="#" data-delete><i class="bi bi-x-circle red"></i></a>
+                        </span>
+                    </li> --></ul>
+                    <input type="hidden" id="filterType" value="all">
+                    <input type="hidden" id="citem" value="">
+                </div>
+            </div>
+
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        <script src="main.js"></script>
+    </body>
+
+    </html>
